@@ -1,13 +1,11 @@
 package view;
 
-import controller.MainApp;
+import controller.DataContainer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import person.Person;
-
-import java.time.LocalDate;
 
 public class PersonOverviewController {
     @FXML
@@ -30,16 +28,16 @@ public class PersonOverviewController {
     @FXML
     private Label birthdayLabel;
 
-    private MainApp mainApp;
+    private DataContainer dataContainer;
 
+    @FXML
     private void initialize() {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
     }
 
-    public void setMainApp(MainApp mainApp) {
-        this.mainApp = mainApp;
-
-        personTable.setItems(mainApp.getPersonData());
+    public void setDataContainer(DataContainer dataContainer) {
+        this.dataContainer = dataContainer;
+        personTable.setItems(dataContainer.getPersonData());
     }
 }
