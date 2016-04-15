@@ -1,4 +1,4 @@
-package controller;
+package utils;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,4 +20,7 @@ public class DataContainer {
     }
 
 
+    public void addPerson(Person person) {
+        personData.add(person);
+    }
 }
