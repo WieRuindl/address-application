@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="280.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PersonEditDialogController">
+<AnchorPane prefHeight="280.0" prefWidth="380.0" styleClass="background" stylesheets="@../styles/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PersonEditDialogController">
     <children>
         <GridPane layoutX="-16.0" layoutY="31.0" prefHeight="200.0" prefWidth="360.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <columnConstraints>
@@ -20,7 +20,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label text="First Name"/>
+                <Label text="First Name" />
                 <Label text="Last Name" GridPane.rowIndex="1" />
                 <Label text="Street" GridPane.rowIndex="2" />
                 <Label text="City" GridPane.rowIndex="3" />
@@ -36,8 +36,8 @@
         </GridPane>
     <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <children>
-            <Button layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" />
-            <Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" />
+            <Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="100.0" text="OK" />
+            <Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="33.0" prefWidth="100.0" text="Cancel" />
         </children>
     </HBox>
 </children></AnchorPane>

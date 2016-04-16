@@ -4,6 +4,7 @@ import controller.PersonEditDialogController;
 import controller.PersonOverviewController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -22,6 +23,8 @@ public class ApplicationHandler {
     public ApplicationHandler(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Address Application");
+
+        this.primaryStage.getIcons().add(new Image("images/icon.png"));
 
         initRootLayout();
 
