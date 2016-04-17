@@ -5,23 +5,22 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootLayoutController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+                <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New" />
+                <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Save as" />
+                <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Info">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+                <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
             </items>
           </Menu>
         </menus>

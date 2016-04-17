@@ -8,7 +8,7 @@ import javafx.scene.control.TableView;
 import model.ApplicationHandler;
 import person.Person;
 import person.PersonFactory;
-import utils.DataContainer;
+import utils.PersonsContainer;
 import utils.DateUtil;
 
 public class PersonOverviewController {
@@ -32,7 +32,7 @@ public class PersonOverviewController {
     @FXML
     private Label birthdayLabel;
 
-    private DataContainer dataContainer;
+    private PersonsContainer personsContainer;
     private ApplicationHandler application;
 
     @FXML
@@ -48,9 +48,9 @@ public class PersonOverviewController {
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
     }
 
-    public void setDataContainer(DataContainer dataContainer) {
-        this.dataContainer = dataContainer;
-        personTable.setItems(dataContainer.getPersonData());
+    public void setPersonsContainer(PersonsContainer personsContainer) {
+        this.personsContainer = personsContainer;
+        personTable.setItems(personsContainer.getPersonsData());
     }
 
     private void showPersonDetails(Person person) {
@@ -92,8 +92,8 @@ public class PersonOverviewController {
         Person person = PersonFactory.createPerson();
         boolean okClicked = application.showPersonEditDialog(person);
         if (okClicked) {
-            DataContainer dataContainer = application.getDataContainer();
-            dataContainer.addPerson(person);
+            PersonsContainer personsContainer = application.getPersonsContainer();
+            personsContainer.addPerson(person);
         }
     }
 
