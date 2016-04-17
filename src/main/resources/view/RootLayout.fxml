@@ -21,6 +21,7 @@
           <Menu mnemonicParsing="false" text="Info">
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                <MenuItem mnemonicParsing="false" onAction="#handleShowBirthdayStatistics" text="Statistics" />
             </items>
           </Menu>
         </menus>

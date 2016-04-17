@@ -1,5 +1,6 @@
 package model;
 
+import controller.BirthdayStatisticsController;
 import controller.PersonEditDialogController;
 import controller.PersonOverviewController;
 import controller.RootLayoutController;
@@ -158,6 +159,29 @@ public class ApplicationHandler {
             alert.setContentText(e.getMessage());
 
             alert.showAndWait();
+        }
+    }
+
+    public void showBirthdayStatistics() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("view/BirthdayStatistics.fxml"));
+            AnchorPane page = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Birthday Statistics");
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(primaryStage);
+
+            Scene scene = new Scene(page);
+            stage.setScene(scene);
+
+            BirthdayStatisticsController controller = loader.getController();
+            controller.setPersonData(personsContainer.getPersonsData());
+
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
